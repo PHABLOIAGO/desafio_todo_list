@@ -92,11 +92,11 @@ class HomeController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void update() {
+  Future<void> update() async {
     if (selectedTab == 1) {
-      this.findAllForWeek();
+      await this.findAllForWeek();
     } else if (selectedTab == 2) {
-      this.findTodoBySelectedDay();
+      await this.findTodoBySelectedDay();
     }
   }
 
