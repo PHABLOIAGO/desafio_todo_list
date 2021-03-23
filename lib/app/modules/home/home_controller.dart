@@ -106,7 +106,10 @@ class HomeController extends ChangeNotifier {
   }
 
   Future<void> restore() async {
-    await repository.SaveTodo(deletedTodo.dataHora, deletedTodo.descricao);
+    await repository.saveTodo(deletedTodo.dataHora, deletedTodo.descricao);
     this.update();
   }
+
+  
+
 }

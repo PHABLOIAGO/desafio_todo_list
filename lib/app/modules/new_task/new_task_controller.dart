@@ -25,7 +25,7 @@ class NewTaskController extends ChangeNotifier {
       if (formKey.currentState.validate()) {
         loading = true;
         saved = false;
-        await repository.SaveTodo(daySelected, nameTaskController.text);
+        await repository.saveTodo(daySelected, nameTaskController.text);
         loading = false;
         saved = true;
       }

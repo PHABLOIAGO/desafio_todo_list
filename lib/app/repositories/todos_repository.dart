@@ -13,7 +13,7 @@ class TodosRepository {
     return result.map((t) => TodoModel.fromMap(t)).toList();
   }
 
-  Future<void> SaveTodo(DateTime dateTimeTask, String descricao) async {
+  Future<void> saveTodo(DateTime dateTimeTask, String descricao) async {
     var conn = await Connection().instance;
 
     await conn.rawInsert("insert into todo values(?,?,?,?)", [null, descricao, dateTimeTask.toIso8601String(), 0]);

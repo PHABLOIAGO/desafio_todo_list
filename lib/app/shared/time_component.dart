@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TimeComponent extends StatefulWidget {
-  DateTime date;
-  ValueChanged<DateTime> onSelectedTime;
+  final DateTime date;
+  final ValueChanged<DateTime> onSelectedTime;
   
   TimeComponent({
     Key key,
